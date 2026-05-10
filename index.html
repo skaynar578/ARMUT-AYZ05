@@ -13,6 +13,23 @@ body{
     color:white;
 }
 
+/* SOL ÜST DESTEK */
+.destek{
+    position:fixed;
+    top:10px;
+    left:10px;
+    text-align:left;
+    font-size:14px;
+}
+
+.destek a{
+    display:block;
+    margin-top:5px;
+    color:#5865F2;
+    text-decoration:none;
+}
+
+/* HEADER */
 header{
     background:black;
     padding:20px;
@@ -93,6 +110,14 @@ button{
 
 <body>
 
+<!-- SOL ÜST DESTEK -->
+<div class="destek">
+    <strong>DESTEK</strong>
+    <a href="https://discord.gg/kEWaZdWN" target="_blank">
+        Discord'a Katıl
+    </a>
+</div>
+
 <header>
 ARMUT-AYZ GAMING PLATFORM
 </header>
@@ -116,12 +141,12 @@ ARMUT-AYZ GAMING PLATFORM
     </a>
 </div>
 
-<!-- ZİYARETÇİ SAYACI -->
+<!-- ZİYARETÇİ -->
 <div class="sayac">
     Toplam Ziyaretçi: <span id="sayac">0</span>
 </div>
 
-<!-- IP KOPYALA -->
+<!-- IP -->
 <div class="box">
 
 <input id="ip" value="Armusmpt.aternos.me" readonly>
@@ -135,7 +160,6 @@ ARMUT-AYZ GAMING PLATFORM
 </div>
 
 <script>
-// KOPYALA
 function kopyala(){
     let ip = document.getElementById("ip");
     ip.select();
@@ -144,7 +168,6 @@ function kopyala(){
     alert("Kopyalandı: " + ip.value);
 }
 
-// ZİYARETÇİ SAYACI (LOCAL)
 let sayi = localStorage.getItem("ziyaretci");
 
 if(sayi){
