@@ -57,23 +57,34 @@ button{
     font-weight:bold;
     cursor:pointer;
 }
+
+.linkler{
+    margin-top:20px;
+}
+
+.linkler a{
+    display:block;
+    margin:10px auto;
+    padding:10px;
+    width:220px;
+    text-align:center;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.discord{
+    background:#5865F2;
+    color:white;
+}
+
+.kick{
+    background:#53FC18;
+    color:black;
+}
 </style>
 </head>
 
-<div style="margin-top:20px;">
-
-    <a href="https://discord.gg/kEWaZdWN" target="_blank" 
-    style="display:block; margin-bottom:10px; padding:10px; background:#5865F2; color:white; text-decoration:none; border-radius:8px; text-align:center;">
-    Discord'a Katıl
-    </a>
-
-    <a href="https://kick.com/ayazayz" target="_blank" 
-    style="display:block; padding:10px; background:#53FC18; color:black; text-decoration:none; border-radius:8px; text-align:center;">
-    Kick Yayını İzle
-    </a>
-
-</div>
-    
 <body>
 
 <header>
@@ -88,14 +99,27 @@ ARMUT-AYZ GAMING PLATFORM
 <a class="btn" href="giris.html">Giriş Yap</a>
 <a class="btn" href="kayit.html">Kayıt Ol</a>
 
+<!-- LINKLER -->
+<div class="linkler">
+    <a href="https://discord.gg/kEWaZdWN" target="_blank" class="discord">
+        Discord'a Katıl
+    </a>
+
+    <a href="https://kick.com/ayazayz" target="_blank" class="kick">
+        Kick Yayını İzle
+    </a>
 </div>
 
+<!-- IP KOPYALA -->
+<div class="box">
 
 <input id="ip" value="Armusmpt.aternos.me" readonly>
 
 <br>
 
 <button onclick="kopyala()">KOPYALA</button>
+
+</div>
 
 </div>
 
