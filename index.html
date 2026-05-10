@@ -7,83 +7,96 @@
 
 <style>
 body{
-margin:0;
-font-family:Arial;
-background:#0a0a0a;
-color:white;
-text-align:center;
+    margin:0;
+    font-family:Arial;
+    background:#0a0a0a;
+    color:white;
 }
 
 header{
-background:black;
-padding:15px;
-color:gold;
-font-size:20px;
+    background:black;
+    padding:20px;
+    text-align:center;
+    color:gold;
+    font-size:22px;
 }
 
 .hero{
-padding:50px 15px;
+    text-align:center;
+    padding:70px 20px;
 }
 
 .btn{
-display:inline-block;
-margin:8px;
-padding:10px 16px;
-background:gold;
-color:black;
-text-decoration:none;
-border-radius:6px;
-font-weight:bold;
+    display:inline-block;
+    padding:12px 20px;
+    margin:10px;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
 }
 
 .box{
-margin-top:25px;
+    text-align:center;
+    margin-top:30px;
 }
 
 input{
-padding:8px;
-width:70%;
-text-align:center;
+    padding:10px;
+    width:70%;
+    text-align:center;
+    font-size:16px;
 }
 
 button{
-margin-top:8px;
-padding:8px 14px;
-background:gold;
-border:none;
-font-weight:bold;
-cursor:pointer;
+    margin-top:10px;
+    padding:10px;
+    background:gold;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
-<header>ARMUT-AYZ GAMING</header>
+<header>
+ARMUT-AYZ GAMING PLATFORM
+</header>
 
 <div class="hero">
-<h2>Çok Oyunculu Platform</h2>
 
-<a class="btn" href="giris.html">Giriş</a>
-<a class="btn" href="kayit.html">Kayıt</a>
+<h1>Çok Oyunculu Platform</h1>
+<p>En iyi oyun deneyimine katıl</p>
+
+<a class="btn" href="giris.html">Giriş Yap</a>
+<a class="btn" href="kayit.html">Kayıt Ol</a>
+
 </div>
 
+<!-- SUNUCU IP -->
 <div class="box">
 
 <h3 style="color:gold;">Sunucu IP</h3>
+<p>Kopyalamak için tıkla</p>
 
 <input id="ip" value="Armusmpt.aternos.me" readonly>
+
 <br>
-<button onclick="kopyala()">Kopyala</button>
+
+<button onclick="kopyala()">KOPYALA</button>
 
 </div>
 
 <script>
 function kopyala(){
-let ip=document.getElementById("ip");
-ip.select();
-document.execCommand("copy");
-alert("Kopyalandı");
+    let ip = document.getElementById("ip");
+    ip.select();
+    ip.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Kopyalandı: " + ip.value);
 }
 </script>
 
