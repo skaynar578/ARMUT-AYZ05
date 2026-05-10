@@ -11,19 +11,19 @@ body{
     font-family:Arial;
     background:#0a0a0a;
     color:white;
-    text-align:center;
 }
 
 header{
-    padding:20px;
     background:black;
+    padding:20px;
+    text-align:center;
     color:gold;
     font-size:22px;
-    font-weight:bold;
 }
 
-.section{
-    padding:60px 20px;
+.hero{
+    text-align:center;
+    padding:70px 20px;
 }
 
 .btn{
@@ -37,39 +37,68 @@ header{
     font-weight:bold;
 }
 
-.card{
-    background:#111;
-    padding:20px;
-    margin:20px auto;
-    width:80%;
-    border-radius:10px;
+.box{
+    text-align:center;
+    margin-top:30px;
+}
+
+input{
+    padding:10px;
+    width:70%;
+    text-align:center;
+    font-size:16px;
+}
+
+button{
+    margin-top:10px;
+    padding:10px;
+    background:gold;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-ARMUT-AYZ
+ARMUT-AYZ GAMING PLATFORM
 </header>
 
-<div class="section">
-<h1>Gaming Platform</h1>
-<p>Çok oyunculu etkinlik sunucusu web sitesi</p>
+<div class="hero">
 
-<h3>Sunucuya Katıl</h3>
-<p>En iyi oyun deneyimini yaşa</p>
+<h1>Çok Oyunculu Platform</h1>
+<p>En iyi oyun deneyimine katıl</p>
 
-<!-- BUTONLAR ÇALIŞIR -->
 <a class="btn" href="giris.html">Giriş Yap</a>
 <a class="btn" href="kayit.html">Kayıt Ol</a>
+
 </div>
 
-<div class="card">
-<h2>Etkinlikler</h2>
-<p>Haftalık turnuvalar ve ödüller</p>
+<!-- SUNUCU IP -->
+<div class="box">
+
+<h3 style="color:gold;">Sunucu IP</h3>
+<p>Kopyalamak için tıkla</p>
+
+<input id="ip" value="Armusmpt.aternos.me" readonly>
+
+<br>
+
+<button onclick="kopyala()">KOPYALA</button>
+
 </div>
+
+<script>
+function kopyala(){
+    let ip = document.getElementById("ip");
+    ip.select();
+    ip.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Kopyalandı: " + ip.value);
+}
+</script>
 
 </body>
 </html>
