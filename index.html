@@ -16,17 +16,27 @@ body{
 /* SOL ÜST DESTEK */
 .destek{
     position:fixed;
-    top:10px;
-    left:10px;
+    top:15px;
+    left:15px;
     text-align:left;
-    font-size:14px;
+    z-index:999;
+}
+
+.destek strong{
+    font-size:18px;
 }
 
 .destek a{
     display:block;
-    margin-top:5px;
-    color:#5865F2;
+    margin-top:8px;
+    padding:8px 12px;
+    background:#5865F2;
+    color:white;
     text-decoration:none;
+    border-radius:6px;
+    font-size:14px;
+    width:150px;
+    text-align:center;
 }
 
 /* HEADER */
@@ -130,7 +140,6 @@ ARMUT-AYZ GAMING PLATFORM
 <a class="btn" href="giris.html">Giriş Yap</a>
 <a class="btn" href="kayit.html">Kayıt Ol</a>
 
-<!-- LINKLER -->
 <div class="linkler">
     <a href="https://discord.gg/kEWaZdWN" target="_blank" class="discord">
         Discord'a Katıl
@@ -141,12 +150,10 @@ ARMUT-AYZ GAMING PLATFORM
     </a>
 </div>
 
-<!-- ZİYARETÇİ -->
 <div class="sayac">
     Toplam Ziyaretçi: <span id="sayac">0</span>
 </div>
 
-<!-- IP -->
 <div class="box">
 
 <input id="ip" value="Armusmpt.aternos.me" readonly>
