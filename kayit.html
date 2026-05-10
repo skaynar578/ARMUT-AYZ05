@@ -1,16 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Kayıt</title>
+<title>Kayıt Ol</title>
+
+<style>
+body{
+    margin:0;
+    background:#0a0a0a;
+    color:white;
+    font-family:Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:#111;
+    padding:25px;
+    border-radius:10px;
+    width:300px;
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:gold;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+a{
+    color:gold;
+    display:block;
+    margin-top:10px;
+}
+</style>
 </head>
-<body style="background:#0a0a0a;color:white;text-align:center;font-family:Arial;">
 
-<h1>Kayıt Sayfası</h1>
-<p>Kayıt olma ekranı</p>
+<body>
 
-<a href="index.html" style="color:gold;">← Geri Dön</a>
+<div class="box">
+<h2>KAYIT OL</h2>
+
+<input id="kadi" placeholder="Kullanıcı adı">
+<input id="sifre" type="password" placeholder="Şifre">
+
+<button onclick="kayit()">Kayıt Ol</button>
+
+<a href="index.html">← Ana Sayfa</a>
+</div>
+
+<script>
+function kayit(){
+    let k = document.getElementById("kadi").value;
+    let s = document.getElementById("sifre").value;
+
+    if(k === "" || s === ""){
+        alert("Boş bırakma");
+        return;
+    }
+
+    localStorage.setItem("user", k);
+    localStorage.setItem("pass", s);
+
+    alert("Kayıt başarılı");
+    window.location.href = "giris.html";
+}
+</script>
 
 </body>
 </html>
