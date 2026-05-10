@@ -82,6 +82,12 @@ button{
     background:#53FC18;
     color:black;
 }
+
+.sayac{
+    margin-top:20px;
+    font-size:18px;
+    color:#ccc;
+}
 </style>
 </head>
 
@@ -110,6 +116,11 @@ ARMUT-AYZ GAMING PLATFORM
     </a>
 </div>
 
+<!-- ZİYARETÇİ SAYACI -->
+<div class="sayac">
+    Toplam Ziyaretçi: <span id="sayac">0</span>
+</div>
+
 <!-- IP KOPYALA -->
 <div class="box">
 
@@ -124,6 +135,7 @@ ARMUT-AYZ GAMING PLATFORM
 </div>
 
 <script>
+// KOPYALA
 function kopyala(){
     let ip = document.getElementById("ip");
     ip.select();
@@ -131,6 +143,18 @@ function kopyala(){
     document.execCommand("copy");
     alert("Kopyalandı: " + ip.value);
 }
+
+// ZİYARETÇİ SAYACI (LOCAL)
+let sayi = localStorage.getItem("ziyaretci");
+
+if(sayi){
+    sayi = Number(sayi) + 1;
+}else{
+    sayi = 1;
+}
+
+localStorage.setItem("ziyaretci", sayi);
+document.getElementById("sayac").innerText = sayi;
 </script>
 
 </body>
